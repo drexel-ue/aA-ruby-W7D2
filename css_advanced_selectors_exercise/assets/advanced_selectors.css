@@ -65,3 +65,8 @@ input[type='submit']:last-child {
 input[type="submit"]:hover {
     -webkit-filter: brightness(90%);
 }
+
+
+ol li:nth-of-type(2n) {
+    background-color: lightgray;
+}
