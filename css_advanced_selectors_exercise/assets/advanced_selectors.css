@@ -57,3 +57,11 @@ input[type="submit"] {
   cursor: pointer;
   outline: none;
 }
+
+input[type='submit']:last-child {
+  background-color: gold;
+}
+
+input[type="submit"]:hover {
+    -webkit-filter: brightness(90%);
+}
