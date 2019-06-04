@@ -14,3 +14,15 @@ end
 # O = n * n
 
 p my_min(list) # =>  -5
+
+def my_min(arr)
+    min = arr[0]
+    arr.each_with_index do |num|
+        min = num if num < min
+    end
+    min
+end
+
+# O = n
+
+p my_min(list) # =>  -5
