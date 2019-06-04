@@ -4,7 +4,7 @@ def first_anagram?(first, second)
     first.chars.permutation.map(&:join).include?(second)
 end
 
-# o(n^4)
+# o(n!)
 
 p 'first'
 p first_anagram?("gizmo", "sally")    #=> false
@@ -12,15 +12,16 @@ p first_anagram?("elvis", "lives")    #=> true
 puts
 
 def second_anagram?(first, second)
-    first.each_char do |char| 
-        index = second.chars.find_index(char)
+    return false if first.length != second.length
+    first.each_char do |char| # n
+        index = second.chars.find_index(char) # n
         if index != nil
-            second.sub!(second[index], "")
+            second.sub!(second[index], "") # n or 1
         else
             return false 
         end
     end
-    second.length == 0
+    second.length == 0 
 end
 
 # # o(n^2)
@@ -35,6 +36,7 @@ def third_anagram?(first, second)
 end
 
 # o(n) + o(j)
+# nlog(n) + jlog(j)
 
 p 'third'
 p third_anagram?("gizmo", "sally")    #=> false
