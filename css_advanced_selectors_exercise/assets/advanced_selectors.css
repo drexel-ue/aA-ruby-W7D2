@@ -43,4 +43,17 @@ ol {
   font-weight: bold;
 }
 
+input[type="radio"] {
+  cursor: pointer;
+  outline: none;
+}
 
+#expertise {
+  cursor: pointer;
+  outline: none;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+  outline: none;
+}
